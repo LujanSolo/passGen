@@ -10,12 +10,14 @@ const boxOneEl = document.getElementById("boxOne-el");
 const boxTwoEl = document.getElementById("boxTwo-el");
 
 // pull between 10-15 random characters from the array with Math.random
-// function getRandomIndex() {
+function getRandomIndex() {
   let randomCharacter = characters[(Math.floor(Math.random() * characters.length))];
-  // return randomCharacter;
-  console.log(randomCharacter)
-// }
+  return randomCharacter;
+}
+
 // add each result to the textContent of the appropriate box, as there are 2 password results at a time
 function generatePass(){
-  
+  for(let i=0; i < passwordLength; i++){
+    boxOneEl.textContent += getRandomIndex();
+  }
 }
