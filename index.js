@@ -17,7 +17,15 @@ function getRandomIndex() {
 
 // add each result to the textContent of the appropriate box, as there are 2 password results at a time
 function generatePass(){
+  
   for(let i=0; i < passwordLength; i++){
     boxOneEl.textContent += getRandomIndex();
-  }
+  };
+
+  function genPassTwo() {
+    for(let i=0; i < passwordLength; i++){
+      boxTwoEl.textContent += getRandomIndex();
+  }};
+
+  genPassTwo();
 }
