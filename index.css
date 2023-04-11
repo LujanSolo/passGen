@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(27, 26, 26, 0.754);
+}
+
+.container {
+  width: 550px;
+  height: 550px;
+  border: 1rem solid black;
+  background: #1F2937;
+  color: #ffffff;
+}
+
+.green-text {
+  color: #4adf86;
+}
+
+
