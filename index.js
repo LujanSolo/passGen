@@ -18,7 +18,35 @@ const boxTwoEl = document.getElementById("boxTwo-el");
 
 
 //* set password length to call function to get user's selected value
-let passwordLength = updateLength();
+// let passwordLength = updateLength();
+
+
+
+
+//todo add if-statement to generatePass() to say "IF THE CHECKBOX IS CHECKED, USE THE characters ARRAY, else USE THE lettersOnlyArray"
+
+// let useSymbols = includeSymbols();
+
+function includeSymbols() {
+  const checkedValueEl = document.getElementById("symbol-selector");
+  const checked = checkedValueEl.checked;
+  return checked;
+};
+
+//* function to pull a random index from the characters array
+function getRandomIndex() {
+  checked = includeSymbols();
+  if (checked) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    return characters[randomIndex];
+  } else {
+    let randomIndex = Math.floor(Math.random() * lettersOnlyArray.length);
+    return lettersOnlyArray[randomIndex];
+  }
+  //! another way to write it:
+  // let randomCharacter = characters[(Math.floor(Math.random() * characters.length))];
+  // return randomCharacter;
+};
 
 
 //* function to return the value of the user's password length selection
@@ -28,22 +56,9 @@ function updateLength() {
   return passwordLength;
 };
 
-//todo add if-statement to generatePass() to say "IF THE CHECKBOX IS CHECKED, USE THE characters ARRAY, else USE THE lettersOnlyArray"
-
-//* function to pull a random index from the characters array
-function getRandomIndex() {
-  
-  let randomIndex = Math.floor(Math.random() * characters.length);
-  return characters[randomIndex];
-
-  //! another way to write it:
-  // let randomCharacter = characters[(Math.floor(Math.random() * characters.length))];
-  // return randomCharacter;
-};
-
-
 //* function to add each result to the textContent of the appropriate box, as there are 2 password results at a time
 function generatePass() {
+
   passwordLength = updateLength(); // set password length based on user's choice
   boxOneEl.textContent = "";  // clear out both boxes so text doesn't overlap on each button click
   boxTwoEl.textContent = "";
