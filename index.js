@@ -38,7 +38,6 @@ function getRandomIndex() {
   // return randomCharacter;
 };
 
-
 //* function to return the value of the user's password length selection
 function updateLength() {
   const userChoiceEl = document.getElementById("user-choice");
