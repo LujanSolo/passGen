@@ -16,8 +16,7 @@
 
   <body>
     <div class="container">
-      
-      <div class="hero">
+     
         <div class="hero-header">
           <h2>Generate a</h2>
           <h2 class="green-text">random password</h2>
@@ -25,12 +24,20 @@
         </div>
 
         <div class="password-options">
-
           <label for="symbol-selector">Include symbols?</label>
-          <input type="checkbox" id="symbol-selector" name="symbol-selector" checked>
-      
+          <input
+            type="checkbox"
+            id="symbol-selector"
+            name="symbol-selector"
+            checked
+          />
           <label for="user-choice">Password Length:</label>
-          <select name= "user-choice" id="user-choice" required="true" onchange="updateOption()">
+          <select
+            name="user-choice"
+            id="user-choice"
+            required="true"
+            onchange="updateLength()"
+          >
             <option value="select">select</option>
             <option value="5">5</option>
             <option value="6">6</option>
@@ -47,13 +54,14 @@
             <option value="17">17</option>
             <option value="18">18</option>
           </select>
-      
         </div>
-        
-        <button id="btn" onclick="generatePass()">Generate passwords</button>
+<div>
+  <button id="btn" onclick="generatePass()">Generate passwords</button>
+</div>
+       
 
         <hr />
-      </div>
+      
 
       <div class="results-container">
         <h3 class="results-box" id="boxOne-el"></h3>
@@ -65,8 +73,11 @@
         <button onclick="copyPasswordTwo()">Copy to clipboard</button>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
   </body>
 </html>

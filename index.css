@@ -8,15 +8,18 @@ html {
 }
 
 body {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 .container {
-  padding: 115px 52px;
-  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   width: 550px;
   height: 550px;
-  border: .3rem solid black;
+  border: 0.3rem solid black;
   border-radius: 6px;
   background: #1f2937;
   color: #ffffff;
@@ -28,14 +31,22 @@ h2 {
 }
 
 p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 10px 0 50px 0;
   font-weight: 500;
 }
 
+label {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0 30px;
+  /* margin: 0 10px; */
+}
+
 button {
   padding: 9px 17px 9px 15px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #ffffff;
@@ -43,6 +54,10 @@ button {
   border: none;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
+}
+
+#btn {
+  margin-top: 2rem;
 }
 
 .green-text {
@@ -56,27 +71,24 @@ hr {
 
 .results-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 35px;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 18px;
 }
 
 .results-box {
+  margin: 0 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #55F991;
-  text-align: center;
+  color: #55f991;
   width: 210px;
   height: 40px;
   border-radius: 6px;
   background: #273549;
+}
+
+/* selects the children of the button wrapper (e.g. the copy buttons) */
+.button-wrapper > * {
+  margin: 25px 35px;
 }
