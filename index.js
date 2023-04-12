@@ -33,5 +33,12 @@ function generatePass(){
 
   genPassTwo();
 }
+function copyPasswordOne() {
+  let copyText = boxOneEl.innerHTML;
+  
+  navigator.clipboard.writeText(copyText).then(() => {
+    alert('Copied first password to clipboard');
+  })
+}
 
 //! bonus: Add options to select/deselect symbols
