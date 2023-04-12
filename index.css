@@ -4,11 +4,12 @@
 }
 
 html {
-  background-color: rgba(27, 26, 26, 0.754);
+  background-color: rgba(78, 72, 85, 0.754);
 }
 
 body {
   font-family: "Karla", sans-serif;
+  margin: 4rem auto;
 }
 
 .container {
