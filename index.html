@@ -4,37 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
+      rel="stylesheet"
+    />
     <title>PassGen 2.0</title>
     <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
-
     <div class="container">
       <div class="hero">
         <h2>Generate a</h2>
         <h2 class="green-text">random password</h2>
         <p>Never use an insecure password again.</p>
-        <button id='btn' onclick="generatePass()">Generate passwords</button>
+        <label for="user-choice">Password Length:</label>
+        <select name= "user-choice" id="user-choice" required="true" onchange="updateOption()">
+          <option value="select">select</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+        </select>
+        <button id="btn" onclick="generatePass()">Generate passwords</button>
 
         <hr />
-      
       </div>
-      
+
       <div class="results-container">
         <h3 class="results-box" id="boxOne-el"></h3>
         <h3 class="results-box" id="boxTwo-el"></h3>
       </div>
-      
+
       <div class="button-wrapper">
         <button onclick="copyPasswordOne()">Copy to clipboard</button>
         <button onclick="copyPasswordTwo()">Copy to clipboard</button>
       </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>
 </html>
