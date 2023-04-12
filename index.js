@@ -3,7 +3,6 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
   "/"
 ];
 
-
 //* a new array is set to a constant, built by filtering through the characters array and implementing a regular expression (regEx) to return only alphabetical characters
 const lettersOnlyArray = characters.filter(char => /^[a-z]+$/i.test(char));
 
@@ -11,7 +10,6 @@ const lettersOnlyArray = characters.filter(char => /^[a-z]+$/i.test(char));
 // [a-z]+: Matches one or more characters that are within the range of "a" through "z" (lowercase only).
 // $: Matches the end of the string.
 // /i: Makes the regex case-insensitive, so it will match uppercase and lowercase letters.
-
 
 //* set the values of "boxOne-el" and "boxTwo-el" to variables in order to set the textContent
 const boxOneEl = document.getElementById("boxOne-el");
@@ -27,7 +25,6 @@ function includeSymbols() {
 //* function to pull a random index from the characters array
 function getRandomIndex() {
   checked = includeSymbols(); // call function and set to variable to get checked value
-
   //then, run a conditional statement to determine which array to pull from, the original or the filtered array
   if (checked) {
     let randomIndex = Math.floor(Math.random() * characters.length);
@@ -51,19 +48,15 @@ function updateLength() {
 
 //* function to add each result to the textContent of the appropriate box, as there are 2 password results at a time
 function generatePass() {
-
   passwordLength = updateLength(); // set password length based on user's choice
   boxOneEl.textContent = "";  // clear out both boxes so text doesn't overlap on each button click
   boxTwoEl.textContent = "";
-
   // for loop continuously adds values from chracters array to box, based on password length
   for (let i = 0; i < passwordLength; i++) {
     boxOneEl.textContent += getRandomIndex();
   };
-
   // method within generatePass() that automatically generates a second password with one click
   function genPassTwo() {
-
     // for loop continuously adds values from chracters array to box, based on password length
     for (let i = 0; i < passwordLength; i++) {
       boxTwoEl.textContent += getRandomIndex();
@@ -72,7 +65,6 @@ function generatePass() {
   // call the method
   genPassTwo();
 };
-
 
 //* function to copy passwordOne to clipboard
 function copyPasswordOne() {
@@ -86,7 +78,6 @@ function copyPasswordOne() {
 //* function to copy passwordTwo to clipboard
 function copyPasswordTwo() {
   let copyText = boxTwoEl.innerHTML;
-
   navigator.clipboard.writeText(copyText).then(() => {
     alert('Copied second password to clipboard');
   })
