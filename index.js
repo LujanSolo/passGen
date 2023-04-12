@@ -74,12 +74,10 @@ function copyPasswordOne() {
 };
 
 //* function to copy passwordTwo to clipboard
-function copyPasswordOne() {
+function copyPasswordTwo() {
   let copyText = boxTwoEl.innerHTML;
 
   navigator.clipboard.writeText(copyText).then(() => {
     alert('Copied second password to clipboard');
   })
 };
-
-//! bonus: Add options to select/deselect symbols
