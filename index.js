@@ -67,7 +67,7 @@ function generatePass() {
 
 //* function to copy passwordOne to clipboard
 function copyPasswordOne() {
-  let copyText = boxOneEl.innerHTML;
+  let copyText = boxOneEl.textContent;
 
   navigator.clipboard.writeText(copyText).then(() => {
     alert('Copied first password to clipboard');
@@ -76,7 +76,7 @@ function copyPasswordOne() {
 
 //* function to copy passwordTwo to clipboard
 function copyPasswordTwo() {
-  let copyText = boxTwoEl.innerHTML;
+  let copyText = boxTwoEl.textContent;
   navigator.clipboard.writeText(copyText).then(() => {
     alert('Copied second password to clipboard');
   })
