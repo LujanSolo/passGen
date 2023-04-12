@@ -16,28 +16,40 @@
 
   <body>
     <div class="container">
+      
       <div class="hero">
-        <h2>Generate a</h2>
-        <h2 class="green-text">random password</h2>
-        <p>Never use an insecure password again.</p>
-        <label for="user-choice">Password Length:</label>
-        <select name= "user-choice" id="user-choice" required="true" onchange="updateOption()">
-          <option value="select">select</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-        </select>
+        <div class="hero-header">
+          <h2>Generate a</h2>
+          <h2 class="green-text">random password</h2>
+          <p>Never use an insecure password again.</p>
+        </div>
+
+        <div class="password-options">
+
+          <label for="symbol-selector">Include symbols?</label>
+          <input type="checkbox" id="symbol-selector" name="symbol-selector" checked>
+      
+          <label for="user-choice">Password Length:</label>
+          <select name= "user-choice" id="user-choice" required="true" onchange="updateOption()">
+            <option value="select">select</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+          </select>
+      
+        </div>
+        
         <button id="btn" onclick="generatePass()">Generate passwords</button>
 
         <hr />
