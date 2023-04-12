@@ -6,27 +6,17 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 //* a new array is set to a constant, built by filtering through the characters array and implementing a regular expression (regEx) to return only alphabetical characters
 const lettersOnlyArray = characters.filter(char => /^[a-z]+$/i.test(char));
 
-//! regEx details: ^: Matches the start of the string.
-//! [a-z]+: Matches one or more characters that are within the range of "a" through "z" (lowercase only).
-//! $: Matches the end of the string.
-//! /i: Makes the regex case-insensitive, so it will match uppercase and lowercase letters.
+// regEx details: ^: Matches the start of the string.
+// [a-z]+: Matches one or more characters that are within the range of "a" through "z" (lowercase only).
+// $: Matches the end of the string.
+// /i: Makes the regex case-insensitive, so it will match uppercase and lowercase letters.
 
 
 //* set the values of "boxOne-el" and "boxTwo-el" to variables in order to set the textContent
 const boxOneEl = document.getElementById("boxOne-el");
 const boxTwoEl = document.getElementById("boxTwo-el");
 
-
-//* set password length to call function to get user's selected value
-// let passwordLength = updateLength();
-
-
-
-
-//todo add if-statement to generatePass() to say "IF THE CHECKBOX IS CHECKED, USE THE characters ARRAY, else USE THE lettersOnlyArray"
-
-// let useSymbols = includeSymbols();
-
+//* function to hold the value of checked input from html
 function includeSymbols() {
   const checkedValueEl = document.getElementById("symbol-selector");
   const checked = checkedValueEl.checked;
@@ -35,7 +25,9 @@ function includeSymbols() {
 
 //* function to pull a random index from the characters array
 function getRandomIndex() {
-  checked = includeSymbols();
+  checked = includeSymbols(); // call function and set to variable to get checked value
+
+  //then, run a conditional statement to determine which array to pull from, the original or the filtered array
   if (checked) {
     let randomIndex = Math.floor(Math.random() * characters.length);
     return characters[randomIndex];
