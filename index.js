@@ -49,20 +49,23 @@ function updateLength() {
 function generatePass() {
   passwordLength = updateLength(); // set password length based on user's choice
   boxOneEl.textContent = "";  // clear out both boxes so text doesn't overlap on each button click
-  boxTwoEl.textContent = "";
+
   // for loop continuously adds values from chracters array to box, based on password length
   for (let i = 0; i < passwordLength; i++) {
     boxOneEl.textContent += getRandomIndex();
   };
   // method within generatePass() that automatically generates a second password with one click
-  function genPassTwo() {
-    // for loop continuously adds values from chracters array to box, based on password length
-    for (let i = 0; i < passwordLength; i++) {
-      boxTwoEl.textContent += getRandomIndex();
-    }
-  };
+
   // call the method
   genPassTwo();
+};
+
+function genPassTwo() {
+  boxTwoEl.textContent = "";
+  // for loop continuously adds values from chracters array to box, based on password length
+  for (let i = 0; i < passwordLength; i++) {
+    boxTwoEl.textContent += getRandomIndex();
+  }
 };
 
 //* function to copy passwordOne to clipboard
